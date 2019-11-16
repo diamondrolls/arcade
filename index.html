@@ -17,6 +17,26 @@
 		width:100%;
 	overflow:scroll;
 }
+		  
+		   	   .slide{
+  width: 430px;
+  height: 550px;
+  overflow:hidden;
+  padding:0;
+  margin: 30px auto;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  -o-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+.slide place{
+  display:block;
+  width:0;
+  float:left;
+  -webkit-transition: all 0.75s;
+  -moz-transition: all 0.75s;
+  transition: all 0.75s;
+}
 		   
 		      .love1{ border-style:outset;
                     float:left;
@@ -176,10 +196,10 @@ h1{
 	}
 		   
 	h2{     
-		
-    color:rgb(255,255,255);
+		z-index:2;
+    color:#46f401;
 		font-size:50px;	   
-		float:left;
+		
 		  }
 		   
 		    .crazy{
@@ -206,6 +226,8 @@ h1{
           <center><h1>Arcade</h1>
 </center>
   </head>
+	<body>
+	
      <a href="https://diamondrolls.github.io/homepage/"> 
       <div class="crazy"><h7 class="neon" data-text="CEO Vault">CEO Vault</h7></div></a>
           <a href='https://diamondrolls.org/'> <div class="homepage"></div></a>
@@ -214,7 +236,31 @@ h1{
   <a href="https://play.google.com/store/apps/details?id=com.bemyeyes.bemyeyes" 
      target="_blank"><div class="eyes"></div></a>
  
-		<center><div class="gaming"></div></center>
+		<center><div class="gaming">		 <center>
+  <section class="slide">
+    <place> <h2>HAVE FUN</h2>
+	    <img src="https://i.pinimg.com/originals/b6/b9/94/b6b994c72f61ce72cb873ce8b2b30122.jpg" width="430px"height="550px">
+     
+    </place>
+    <place><h2>RELAX</h2>
+       <img src="https://i.pinimg.com/originals/da/b4/50/dab450c9f3db97b4fff0861a20652a30.jpg" width="430px"height="550px">
+    
+    </place>
+    <place> <h2>BE A BOSS</h2>
+	    <img src="https://i.pinimg.com/originals/b6/b9/94/b6b994c72f61ce72cb873ce8b2b30122.jpg" width="430px"height="550px">
+	    
+    </place>
+    <place> <h2>GAME ON</h2>
+       <img src="https://i.pinimg.com/originals/01/05/27/010527622a3563e542fd9b3040311e7d.jpg" width="430px"height="550px">
+	   
+    </place>
+    <place>
+	   <h2>WELCOME TO THE GAMING CENTER</h2>
+       <img src="https://i.pinimg.com/originals/bd/a1/10/bda110377a4c99efa45878cb07dd688c.png" width="430px"height="550px">
+    </place>
+</section>
+		
+</center> </div></center>
 	
 	
 	<center><iframe width="860" height="615" src="https://www.youtube.com/embed/lfj7gu8urSM"
@@ -283,5 +329,21 @@ h1{
    
    </div>
   </div></center>
+		<script>
+ var x = 0;
+var y = 0;
+var myVar=setInterval(function(){slides()},3000);
+function slides() {
+  document.getElementsByTagName("place")[y].style.width="0px";
+  document.getElementsByTagName("place")[x].style.width="100%";
+  y = x;
+  ++x;
+  if (x == 5) {
+     x = 0;
+  }
+}
+ 
+         </script>
+		</body>
   <footer></footer>
   </html>
